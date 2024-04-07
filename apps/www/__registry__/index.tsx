@@ -159,6 +159,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "color-picker": {
+      name: "color-picker",
+      type: "components:ui",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/default/ui/color-picker")),
+      source: "",
+      files: ["registry/default/ui/color-picker.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "context-menu": {
       name: "context-menu",
       type: "components:ui",
@@ -958,6 +969,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/collapsible-demo")),
       source: "",
       files: ["registry/default/example/collapsible-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "color-picker-demo": {
+      name: "color-picker-demo",
+      type: "components:example",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/default/example/color-picker-demo")),
+      source: "",
+      files: ["registry/default/example/color-picker-demo"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -2549,6 +2571,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "color-picker": {
+      name: "color-picker",
+      type: "components:ui",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/new-york/ui/color-picker")),
+      source: "",
+      files: ["registry/new-york/ui/color-picker.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "context-menu": {
       name: "context-menu",
       type: "components:ui",
@@ -3348,6 +3381,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/example/collapsible-demo")),
       source: "",
       files: ["registry/new-york/example/collapsible-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "color-picker-demo": {
+      name: "color-picker-demo",
+      type: "components:example",
+      registryDependencies: ["popover"],
+      component: React.lazy(() => import("@/registry/new-york/example/color-picker-demo")),
+      source: "",
+      files: ["registry/new-york/example/color-picker-demo"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

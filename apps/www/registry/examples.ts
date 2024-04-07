@@ -254,6 +254,12 @@ export const examples: Registry = [
     files: ["example/collapsible-demo.tsx"],
   },
   {
+    name: "color-picker-demo",
+    type: "components:example",
+    registryDependencies: ["popover"],
+    files: ["example/color-picker-demo"],
+  },
+  {
     name: "combobox-demo",
     type: "components:example",
     registryDependencies: ["command"],

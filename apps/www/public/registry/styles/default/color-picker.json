@@ -1,0 +1,16 @@
+{
+  "name": "color-picker",
+  "dependencies": [
+    "react-colorful"
+  ],
+  "registryDependencies": [
+    "popover"
+  ],
+  "files": [
+    {
+      "name": "color-picker.tsx",
+      "content": "import { Pipette } from \"lucide-react\";\nimport { HexColorPicker } from \"react-colorful\";\n\nimport { Popover, PopoverContent, PopoverTrigger } from \"@/registry/default/ui/popover\";\n\nconst defaultColors = [\n  \"#FF6900\",\n  \"#FCB900\",\n  \"#7BDCB5\",\n  \"#00D084\",\n  \"#8ED1FC\",\n  \"#0693E3\",\n  \"#ABB8C3\",\n  \"#EB144C\",\n]\n\nexport const ColorPicker = ({\n  color,\n  onChange\n}: {\n  color: string;\n  onChange: (color: string) => void\n}) => (\n  <div className=\"flex items-center gap-4\">\n    <Popover>\n      <PopoverTrigger>\n        <Color color={color} wrapper />\n      </PopoverTrigger>\n      <PopoverContent className=\"flex h-14 items-center justify-center px-4 py-0\">\n        <div className=\"flex w-full items-center gap-2 p-0\">\n          {defaultColors.map( color => (\n            <Color\n              key={color}\n              color={color}\n              onClick={() => onChange(color)}\n            />\n          ))}\n        </div>\n        <div>\n          <Popover>\n            <PopoverTrigger className=\"flex items-center\">\n              <div className=\"flex size-6 items-center justify-cetner rounded-md border p-1\">\n                <Pipette className=\"text-lg\" />\n              </div>\n            </PopoverTrigger>\n            <PopoverContent>\n              <HexColorPicker onChange={onChange} color={color} />\n            </PopoverContent>\n          </Popover>\n        </div>\n      </PopoverContent>\n    </Popover>\n  </div>\n)\n\nexport const Color = ({\n  color,\n  onClick,\n  wrapper\n}: {\n  wrapper?: boolean;\n  color: string;\n  onClick?: () => void\n}) => wrapper ? (\n  <div\n    className=\"flex size-8 items-center justify-center rounded-md border\"\n    onClick={onClick}\n  >\n    <div className=\"size-4 rounded-full\" style={{ background: color }} />\n  </div>\n) : (\n  <div\n    className=\"size-4 rounded-full hover:scale-110\"\n    style={{ background: color }}\n    onClick={onClick}\n  />\n)\n\n\n"
+    }
+  ],
+  "type": "components:ui"
+}

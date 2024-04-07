@@ -149,6 +149,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Color Picker",
+          href: "/docs/components/color-picker",
+          items: []
+        },
+        {
           title: "Combobox",
           href: "/docs/components/combobox",
           items: [],

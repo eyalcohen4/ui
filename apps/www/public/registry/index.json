@@ -144,6 +144,19 @@
     "type": "components:ui"
   },
   {
+    "name": "color-picker",
+    "dependencies": [
+      "react-colorful"
+    ],
+    "registryDependencies": [
+      "popover"
+    ],
+    "files": [
+      "ui/color-picker.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "context-menu",
     "dependencies": [
       "@radix-ui/react-context-menu"

@@ -87,6 +87,13 @@ export const ui: Registry = [
     files: ["ui/command.tsx"],
   },
   {
+    name: "color-picker",
+    type: "components:ui",
+    dependencies: ["react-colorful"],
+    files: ["ui/color-picker.tsx"],
+    registryDependencies: ["popover"],
+  },
+  {
     name: "context-menu",
     type: "components:ui",
     dependencies: ["@radix-ui/react-context-menu"],
